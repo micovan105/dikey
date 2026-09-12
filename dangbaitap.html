@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/dangbaitap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="moduletaobai">
+            <img style="width:120px;height:80px;" src="images/logodikey.png">
+            
+            <p style="font-size:30px;color:rgb(1, 183, 183);margin:0;">Thảo luận cùng nhau</p>
+            <p style="margin:3px;">Nếu có bài khó, hãy đăng một bài tập lên để mọi người cùng giải nhé.</p>
+            <br>
+            <span>
+                <select id="caphoc" style="width:160px;height:40px;border-radius:8px;cursor:pointer;">
+                    <option value="" disabled selected>Cấp học</option>
+                    <option style="font-weight: bold;" value="dai-hoc">Đại học</option>
+                    <option style="font-weight: bold;" value="cap-3">Cấp 3 (Trung học phổ thông)</option>
+                    <option value="lop-12">- Lớp 12</option>
+                    <option value="lop-11">- Lớp 11</option>
+                    <option value="lop-10">- Lớp 10</option>
+                    <option style="font-weight: bold;" value="cap-2">Cấp 2 (Trung học cơ sở)</option>
+                    <option value="lop-9">- Lớp 9</option>
+                    <option value="lop-8">- Lớp 8</option>
+                    <option value="lop-7">- Lớp 7</option>
+                    <option value="lop-6">- Lớp 6</option>
+                    <option style="font-weight: bold;" value="cap-1">Cấp 1 (Tiểu học)</option>
+                    <option value="lop-5">- Lớp 5</option>
+                    <option value="lop-4">- Lớp 4</option>
+                    <option value="lop-3">- Lớp 3</option>
+                    <option value="lop-2">- Lớp 2</option>
+                    <option value="lop-1">- Lớp 1</option>
+                    <option value="khac">Trình độ khác</option>
+                </select>
+                <select id="monhoc" style="width:160px;height:40px;border-radius:8px;cursor:pointer;">
+                    <option value="" disabled selected>Môn học</option>
+                    <option value="am-nhac">Âm nhạc</option>
+                    <option value="my-thuat">Mỹ thuật</option>
+                    <option value="toan-hoc">Toán học</option>
+                    <option value="vat-ly">Vật lý</option>
+                    <option value="hoa-hoc">Hóa học</option>
+                    <option value="ngu-van">Ngữ văn</option>
+                    <option value="tieng-viet">Tiếng Việt</option>
+                    <option value="tieng-anh">Tiếng Anh</option>
+                    <option value="dao-duc">Đạo đức</option>
+                    <option value="khoa-hoc">Khoa học</option>
+                    <option value="lich-su">Lịch sử</option>
+                    <option value="dia-ly">Địa lý</option>
+                    <option value="sinh-hoc">Sinh học</option>
+                    <option value="tin-hoc">Tin học</option>
+                    <option value="lap-trinh">Lập trình</option>
+                </select>
+            </span>
+            <br>
+            <textarea id="noidungbai" rows="8" style="width:650px;margin:10px;border:1.5px solid black;border-radius:8px;padding-left:10px;padding-top:10px;font-size:18px;"></textarea>
+            <br>
+            <img style="border:2px solid black; width:300px;display:none;" id="img" src="">
+            <span>
+                <button onclick="upanh()" style="width:120px;height:35px;background-color:rgb(3, 163, 88);color:white;font-size:17px;border:1.5px solid;border-radius:6px;cursor:pointer;">Tải ảnh lên</button>
+                <button id="dangbaibtn" style="width:120px;height:35px;background-color:rgb(203, 103, 2);color:white;font-size:17px;border:1.5px solid;border-radius:6px;cursor:pointer;">Đăng bài</button>
+            </span>
+            <input id="upimage" type="file" accept="image/*" style="display:none;">
+            
+            <div id="khuVucSuaAnh" style="display:none; margin-top:15px; max-width:800px;">
+                <div style="max-height:600px; overflow:hidden;">
+                    <img id="anhChinhSua" src="" style="max-width:700px;">
+                </div>
+                <button id="nutXacNhanUp" type="button" style="margin-top:10px; padding:8px 15px; background-color:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;">Xác nhận & Tải lên</button>
+            </div>
+        </div>
+
+        <script>
+            function upanh(){
+                document.getElementById("upimage").click();
+            }
+            document.getElementById("nutXacNhanUp").addEventListener("click", function(){
+                setTimeout(()=>{
+                    document.getElementById("img").src=localStorage.getItem("linkanh")
+                    document.getElementById("img").style.display="block"
+                },2000)
+            })
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+        <script src="jss.dangbaitap.js" type="module"></script>
+        <script src="jss/header.js" type="module"></script>
+    </body>
+</html>

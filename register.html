@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/register.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div id="moduledangky">
+            <img style="width:120px;" src="images/logodikey.png">
+            
+            <span style="display:flex; gap:10px;">
+                <span style="margin:0;">
+                    1.Họ:
+                    <input id="honame" placeholder="Nhập Họ của bạn...">
+                </span>
+                <span>
+                    2.Tên:
+                    <input id="namechinh" placeholder = "Nhập tên và tên đệm của bạn...">
+                </span>
+                 
+
+            </span>
+            3.Link ảnh đại diện
+            <input id="avatarlink" placeholder="Dán link ảnh của bạn muốn làm avatar vào đây..">
+            4.Ngày tháng năm sinh:
+            <input id="ngaysinh" type="date" >
+            5.Giới tính
+            <span>
+                <button id="chonnam">
+                    <i class="fa-solid fa-person"></i>
+                </button>
+                <button id="chonnu">
+                    <i class="fa-solid fa-person-dress"></i>
+                </button>
+            </span>
+            6.Tạo mật khẩu.
+            <span style="display:flex; gap:10px;">
+                <input id="matkhau" placeholder="Tạo mật khẩu">
+                <input id="xacnhanmk" placeholder="Nhập lại mật khẩu"> 
+            </span>
+            <span>
+                <input type="checkbox" id="dongydk">Bạn đồng ý với mọi dịch vụ của chúng tôi.
+                <button id="dkbtn">Đăng ký</button>
+            </span>
+            <p style="color:red;margin:0;" id="thongbao"></p>
+        </div>
+        <script type="module" src="jss/register.js"></script>
+    </body>
+</html>

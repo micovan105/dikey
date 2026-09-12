@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/taobaidang.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="khungchinh">
+            <h2>Chia sẻ câu chuyện của bạn.</h2>
+            <hr>
+            <b>Nội dung:</b>
+            <textarea id="noidungbai" style="width:600px;padding:10px;border:1.5px solid;border-radius:5px;font-size:16px;margin-bottom:20px;margin-top:10px;" rows="8" placeholder="Hôm nay bạn tâm trạng bạn thế nào ? (Tôi rất buồn) (Tôi rất vui) (tôi ổn) (Tôi bị gay)"></textarea>
+            <b>Hình ảnh: (nếu có)</b><br>
+            <input id="anhbtn" type="file" accept="image/*" style="display:none;">
+            <button id="upbtn" style="width:50px;height:30px;color:rgb(3, 196, 196);font-size:15px;margin-top:10px;margin-bottom:10px;cursor:pointer;background-color:rgba(255, 255, 0, 0.249);border:1.5px solid;"><i class="fas fa-file-image"></i></button>
+            <br>
+            <b>Video:</b>
+            <input class="ref" type="text" placeholder="Link video youtobe:">
+            <button id="dangbai">Đăng bài viết.</button>
+        </div>
+        <script src="jss/header.js" type="module"></script>
+        <script src="jss/taobaidang.js" type="module"></script>
+    </body>
+</html>
